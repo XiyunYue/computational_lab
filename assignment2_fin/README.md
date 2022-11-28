@@ -1,11 +1,6 @@
-# Add here a title for the project
-Different interpolation methods for audio restoration
+# Different interpolation methods for audio restoration
 
-
-## High-level Description of the project
-This assignment builds on Assignment I. We assume that we have successfully detected the clicks and we are applying different interpolation methods to restore the audio, such as
-- median filtering
-- cubic splines
+## This assignment builds on Assignment I. We assume that we have successfully detected the clicks and we are applying different interpolation methods to restore the audio, such as - median filtering- cubic splines
 
 ---
 
@@ -16,26 +11,17 @@ playsound==1.2.2
 scipy==1.9.3
 tqdm==4.64.1
 
-
-
-pipreqs $project/path/requirements.txt
-```
-For more details check [here](https://github.com/bndr/pipreqs)
-
-
 Afer installing all required packages you can run the demo file simply by typing:
-```sh
 python main_me.py
 python main_cu.py
+
 
 ## Methodology and Results
 1. Median filtering: first import audio files, detect files and clean files, and convert them into column arrays.
 Since we choose to filter only on clicks, and for continuous clicks, the entire area needs to be selected to ensure that all continuous clicks are filtered out at one time. Therefore, for data processing, use the combination of for and if to find the starting position of each continuous clicks , duration length and required filter window length.
 After obtaining these three, since we need to display the progress bar of the processing progress, we use the combination of for and tqdm to perform our data processing cycle, filter each clicks, and finally get the result.
 
-cubicSpline: For the cubic interpolation method, you also need to import the audio first, and then process the data.
-
-In order to use the CubicSpline that comes with python, we need to process the data into an x, y curve that can be recognized by the function, and then delete the x, y values corresponding to the noise data in the audio data. Finally, the function can be directly used to obtain the curve, and then the corresponding value can be obtained according to the position of the noise to generate new data.
+2. cubicSpline: For the cubic interpolation method, you also need to import the audio first, and then process the data.In order to use the CubicSpline that comes with python, we need to process the data into an x, y curve that can be recognized by the function, and then delete the x, y values corresponding to the noise data in the audio data. Finally, the function can be directly used to obtain the curve, and then the corresponding value can be obtained according to the position of the noise to generate new data.
 
 
 
@@ -60,7 +46,7 @@ After listening to the two restored files, we notice the filtering effects of th
 
 
 ---
-Resources:
+**Resources:**
 https://en.wikipedia.org/wiki/Markdown
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 Online Readme Editors: https://dillinger.io/ , https://www.makeareadme.com
