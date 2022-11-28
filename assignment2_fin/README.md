@@ -10,11 +10,12 @@ This assignment builds on Assignment I. We assume that we have successfully dete
 ---
 
 ## Installation and Execution                              
-pip install numpy
-pip install scipy
-pip install tqdm
-pip install matplotlib
-pip install matplotlib
+matplotlib==3.6.2
+numpy==1.23.4
+playsound==1.2.2
+scipy==1.9.3
+tqdm==4.64.1
+
 
 
 pipreqs $project/path/requirements.txt
@@ -42,13 +43,15 @@ In order to use the CubicSpline that comes with python, we need to process the d
 
 1. For the median filter, different lengths were explored to test the effectiveness of the restoration. We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 
-<img src="MedianFilter_MSEvsLength.PNG" width="350">
+<img src="MedianFilter_MSEvsLength.png" width="350">
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
+
 <img src="wav1.png" width="350">
 
 
 2. Using the cubic splines, we observe the restored waveform <output_cubicSplines.wav> with the optimal filter length is given below:
+
 <img src="wav2.png" width="350">
 
 3. Comparing the two different interpolation methods, we notice that When the median filter takes the lowest MSE, the MSE of the two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).They can all be run in a very short time.
