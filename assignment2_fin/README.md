@@ -42,7 +42,7 @@ In order to use the CubicSpline that comes with python, we need to process the d
 
 1. For the median filter, different lengths were explored to test the effectiveness of the restoration. We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 
-<img src="MedianFilter_MSEvsLength.png" width="350">
+<img src="MedianFilter_MSEvsLength.PNG" width="350">
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
 <img src="wav1.png" width="350">
@@ -57,13 +57,20 @@ After listening to the two restored files, we notice the filtering effects of th
 
 
 ---
-## Credits
-
-This code was developed for purely academic purposes by XXXX (add github profile name) as part of the module ..... 
-
 Resources:
-- XXXX
-- XXX
+https://en.wikipedia.org/wiki/Markdown
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+Online Readme Editors: https://dillinger.io/ , https://www.makeareadme.com
+https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
+Docstrings: https://www.programiz.com/python-programming/docstrings
+https://numpy.org/doc/stable/user/quickstart.html
+Numpy for matlab users https://numpy.org/doc/stable/user/numpy-for-matlab-users.html
+Progress bars: https://pypi.org/project/progress/
+Audio Basics in Python: https://www.it-jim.com/blog/audio-processing-basics-in-python/
+Unittesting: 
+https://docs.python.org/3/library/unittest.html
+https://colab.research.google.com/github/damorimRG/practical_testing_book/blob/master/testgranularity/unittesting.ipynb
+
 
 
 
