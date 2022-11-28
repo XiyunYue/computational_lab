@@ -2,7 +2,9 @@
 
 ## High-level Description of the project
 
-This assignment builds on Assignment I. We assume that we have successfully detected the clicks and we are applying different interpolation methods to restore the audio, such as - median filtering- cubic splines
+This assignment builds on Assignment I. We assume that we have successfully detected the clicks and we are applying different interpolation methods to restore the audio, such as 
+- median filtering
+- cubic splines
 
 ---
 
@@ -19,11 +21,13 @@ python main_cu.py
 
 
 ## Methodology and Results
-1. Median filtering: first import audio files, detect files and clean files, and convert them into column arrays.
-Since we choose to filter only on clicks, and for continuous clicks, the entire area needs to be selected to ensure that all continuous clicks are filtered out at one time. Therefore, for data processing, use the combination of for and if to find the starting position of each continuous clicks , duration length and required filter window length.
-After obtaining these three, since we need to display the progress bar of the processing progress, we use the combination of for and tqdm to perform our data processing cycle, filter each clicks, and finally get the result.
+1. Median filtering: 
+First we import audio files, detect files and clean files, and convert them into column arrays.
+For continuous clicks, the input needs to be selected to ensure that all continuous clicks are filtered out at one time. Therefore, for data processing, use the combination of 'for' and 'if' to find the starting position, duration length and required filter window length of each continuous clicks.
+After obtaining these, since we need to display the progress bar of the processing progress, we use the combination of 'for' and 'tqdm' to perform our data processing cycle, filter each clicks, and finally get the result.
 
-2. cubicSpline: For the cubic interpolation method, you also need to import the audio first, and then process the data.In order to use the CubicSpline that comes with python, we need to process the data into an x, y curve that can be recognized by the function, and then delete the x, y values corresponding to the noise data in the audio data. Finally, the function can be directly used to obtain the curve, and then the corresponding value can be obtained according to the position of the noise to generate new data.
+2. Cubic Spline: 
+For the cubic interpolation method, we also need to import the audio first, and then process the data. In order to use the 'CubicSpline' that comes from python, we need to process the data that can be recognized by the function. Then we need to delete the x, y values corresponding to the noise data in the audio data. Finally, the function can be directly used to obtain the curve, and then the corresponding value can be obtained according to the position of the noise to generate new data.
 
 
 
@@ -42,10 +46,9 @@ The restored waveform <output_medianFilter.wav> with the optimal filter length i
 
 <img src="wav2.png" width="350">
 
-3. Comparing the two different interpolation methods, we notice that When the median filter takes the lowest MSE, the MSE of the two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).They can all be run in a very short time.
+3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
-After listening to the two restored files, we notice the filtering effects of the two methods are similar, and there is no big difference in their MSE.
-
+After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
 
 ---
 **Resources:**
