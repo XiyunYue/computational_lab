@@ -1,6 +1,6 @@
 # Different interpolation methods for audio restoration
 
-## Installation and Execution
+## High-level Description of the project
 
 This assignment builds on Assignment I. We assume that we have successfully detected the clicks and we are applying different interpolation methods to restore the audio, such as - median filtering- cubic splines
 
