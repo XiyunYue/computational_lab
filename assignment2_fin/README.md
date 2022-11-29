@@ -94,7 +94,7 @@ If you need to test the results of the median filtering method, you can enter th
 
 2. The original audio signal with clicks and clean audio signal show like this:
 <div align=center>
-<img src="cl+de.png" width="550" >
+<img src="cl+de.png" width="750" >
 </div>
 
 
@@ -102,13 +102,13 @@ If you need to test the results of the median filtering method, you can enter th
 The restored waveform with the optimal filter length is given below:
 
 <div align=center>
-<img src="me.png" width="550">
+<img src="me.png" width="750">
 </div>
 
 Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
 
 <div align=center>
-<img src="cu.png" width="550">
+<img src="cu.png" width="750">
 </div>
 
 3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
