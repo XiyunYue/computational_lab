@@ -58,11 +58,11 @@ If you need to test the results of the median filtering method, you can enter th
 
     Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
 
-    We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
+    We tested the MSE of w from 2*n+1 to 2*n+49 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 
-|**b for 2*n+b**| **MSE** |**b for 2*n+b**| **MSE** |
-|---------------|---------|---------------|---------|
-|1	            |65.7|
+|**b for 2*n+b**| **MSE** |
+|---------------|---------------|
+|1  |65.7|
 |3	|98.1|
 |5	|77|
 |7	|54.6|
@@ -85,26 +85,16 @@ If you need to test the results of the median filtering method, you can enter th
 |41	|191.1|
 |43	|210.6|
 |45	|218.1|
-
-|**b for 2*n+b**|1|3|5|7|9|
-|**MSE**        |65.7|98.1|77|54.6|71.4|
-|**b for 2*n+b**|11|13|15|17|19
-|**MSE**        |94.3|73.2|61.1|76.8|100.4|
-|**b for 2*n+b**|21|23|25|27|29|
-|**MSE**        |79.64|82.3|87.6|99.1|103.7|
-|**b for 2*n+b**|31|33|35|37|39
-|**MSE**        |111.3|134.3|145.4|157.9|173.3|
-|**b for 2*n+b**|41|43|45|47|49
-|**MSE**        |191.1|210.6|218.1|245.4|277.5|
-
+|47|245.4|
+|49|277.5|
 
 <div align=center>
-<img src="MedianFilter_MSEvsLength.png" width="350">
+<img src="co.png" width="350">
 </div>
 
 2. The original audio signal with clicks and clean audio signal show like this:
 <div align=center>
-<img src="co.png" width="550" >
+<img src="cl+de.png" width="550" >
 </div>
 
 
