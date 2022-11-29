@@ -20,6 +20,21 @@ fs, data = wavfile.read('data_degraded.wav')
 fs, b_k = wavfile.read('detectionfile.wav')
 fs, data_clean = wavfile.read('clean.wav')
 
+fig = plt.figure(1)
+plt.subplots_adjust(hspace = 0.7)
+plt.subplot(211)
+plt.plot(data)
+plt.xlabel("No. of Samples", fontsize=15)
+plt.ylabel("Amplitude", fontsize=15)
+plt.title("Clean Signal", fontsize=15)
+
+plt.subplot(212)
+plt.plot(data_clean)
+plt.xlabel("No. of Samples", fontsize=15)
+plt.ylabel("Amplitude", fontsize=15)
+plt.title("Degraded Signal", fontsize=15)
+plt.show()
+
 #make the datas in the same shape
 b_k = b_k.reshape(-1, 1)
 data = data.reshape(-1, 1)
@@ -36,8 +51,12 @@ f = CubicSpline(x, y)
 
 
 #Use the obtained function to repair each noise point
+start_time = time.time()
 for i in tqdm(range(len(miss_loca))):
     data_new[miss_loca[i]] = f(miss_loca[i])
+end_time = time.time()
+execution_time = end_time - start_time
+print('The execution time in seconds is :', execution_time)
 
 #make the output audio and play it
 write("output_cubicSplines.wav", fs, data_new)
@@ -45,12 +64,15 @@ write("output_cubicSplines.wav", fs, data_new)
 playsound("data_degraded.wav")
 playsound("output_me.wav")
 
+# fig = plt.figure(2)
+# plt.plot(data_new)
+# plt.xlabel("No. of Samples")
+# plt.ylabel("Amplitude")
+# plt.title("Signal After Cubic Splines")
+# plt.show()
 
 MSE = mse(data_new, data_clean)
 print(MSE)
 print("Done")
-# fig = plt.figure(2)
-# plt.plot(data_new)
-# plt.show()
 
 
