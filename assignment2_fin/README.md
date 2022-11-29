@@ -70,7 +70,7 @@ If you need to test the results of the median filtering method, you can enter th
 2. Before filtering, the original audio with clicks is shown in the figure:
 
 <div align=center>
-<img src="data_degraded.png" width="350">
+<img src="degraded_signal.png" width="350">
 </div>
 
 A clean audio signal looks like this:
