@@ -59,21 +59,47 @@ If you need to test the results of the median filtering method, you can enter th
     Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
 
     We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
+
 <div align=center>
-<img src="table.png" width="350">
+|**b for 2*n+b**|**MSE**|
+|---|---|
+|1	|65.7|
+|3	|98.1|
+|5	|77|
+|7	|54.6|
+|9	|71.42081352|
+|11	|94.3|
+|13	|73.20196943|
+|15	|61.06157929|
+|17	|76.8493151|
+|19	|100.3787688|
+|21	|79.64|
+|23	|82.26914864|
+|25	|87.6|
+|27	|99.1|
+|29	|103.7|
+|31	|111.3|
+|33	|134.319954|
+|35	|145.4|
+|37	|157.9236164|
+|39	|173.3|
+|41	|191.1|
+|43	|210.6|
+|45	|218.1|
 </div>
+
 
 <div align=center>
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
 2. Before filtering, the original audio with clicks is shown in the figure:
-
+<div align=center>
 <p float="left">
-<img src="degraded_signal.png" width="350" />
-<img src="clean_signal.png" width="350" />
+<img src="de.png" width="350" />
+<img src="cl.png" width="350" />
 </p>
-
+</div>
 A clean audio signal looks like this:
 
 
