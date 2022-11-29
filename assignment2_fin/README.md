@@ -40,8 +40,6 @@ For the cubic interpolation method, we also need to import the audio first, and 
 
 1. For the median filter, different lengths were explored to test the effectiveness of the restoration. We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 <img src="table.png" width="350">
-<img src="mse_change.png" width="350">
-
 <img src="MedianFilter_MSEvsLength.png" width="350">
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
