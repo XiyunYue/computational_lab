@@ -25,6 +25,11 @@ python main_me.py
 
 python main_cu.py
 
+If you need to test the results of the median filtering method, you can enter the unit test file and run unit test by typing:
+
+python test.py
+
+
 
 ## Methodology and Results
 1. Median filtering: 
@@ -43,21 +48,20 @@ We also performed unit tests on the program. In order to simplify the test, we r
 **Results**
 
 1. For the median filter, we find the lowest point of the MSE by changing the relationship between the window size and the noise length. According to w = 2*n+b, where w is the window size, n is the continuous length of the noise, and b is the linear relationship we can adjust. W need to be more than 2*n+1, because b=1 can just ensures all clicks are completely filtered out. Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
-
- We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
-<img src="table.png" width="350">
-<img src="MedianFilter_MSEvsLength.png" width="350">
+We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
+<img src="table.png" width="550">
+<img src="MedianFilter_MSEvsLength.png" width="550">
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
 
-<img src="wav1.png" width="350">
+<img src="wav1.png" width="550">
 
 
 2. Using the cubic splines, we observe the restored waveform <output_cubicSplines.wav> with the optimal filter length is given below:
 
-<img src="wav2.png" width="350">
+<img src="wav2.png" width="550">
 
 3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
-After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
+4. After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
 
