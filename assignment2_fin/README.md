@@ -47,19 +47,29 @@ We also performed unit tests on the program. In order to simplify the test, we r
 
 **Results**
 
-1. For the median filter, we find the lowest point of the MSE by changing the relationship between the window size and the noise length. According to w = 2*n+b, where w is the window size, n is the continuous length of the noise, and b is the linear relationship we can adjust. W need to be more than 2*n+1, because b=1 can just ensures all clicks are completely filtered out. Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
+1. For the median filter, we find the lowest point of the MSE by changing the relationship between the window size and the noise length. According to w = 2*n+b, where w is the window size, n is the continuous length of the noise, and b is the linear relationship we can adjust. W need to be more than 2*n+1, because b=1 can just ensures all clicks are completely filtered out. 
+
+Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
+
 We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
-<img src="table.png" width="550">
-<img src="MedianFilter_MSEvsLength.png" width="550">
+<div align=center>
+<img src="table.png" width="350">
+</div>
+
+<div align=center>
+<img src="MedianFilter_MSEvsLength.png" width="350">
+</div>
 
 The restored waveform <output_medianFilter.wav> with the optimal filter length is given below:
 
-<img src="wav1.png" width="550">
-
+<div align=center>
+<img src="wav1.png" width="350">
+</div>
 
 2. Using the cubic splines, we observe the restored waveform <output_cubicSplines.wav> with the optimal filter length is given below:
-
-<img src="wav2.png" width="550">
+<div align=center>
+<img src="wav2.png" width="350">
+</div>
 
 3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
