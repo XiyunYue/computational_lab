@@ -67,13 +67,14 @@ python test.py
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
-    The restored waveform with the optimal filter length is given below:
+The restored waveform with the optimal filter length is given below:
 
 <div align=center>
 <img src="wav1.png" width="350">
 </div>
 
-    Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
+Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
+
 <div align=center>
 <img src="wav2.png" width="350">
 </div>
