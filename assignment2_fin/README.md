@@ -73,6 +73,10 @@ python test.py
 <img src="data.png" width="350">
 </div>
 
+A clean audio signal looks like this:
+<div align=center>
+<img src="clean.png" width="350">
+</div>
 
 The restored waveform with the optimal filter length is given below:
 
