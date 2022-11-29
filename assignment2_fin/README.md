@@ -50,7 +50,7 @@ If you need to test the results of the median filtering method, you can enter th
 3. Unit test：
 
     We also performed unit tests on the program. In order to simplify the test, we rewrite the median filter program as a function whose input is audio data and detection data, and the output has only restorated audio data. Because the python system has a median filter function, we can use this compare with our own designed function. Just copy the original function and change the function called in the last part. It will compare the data in two output one by one. Finally, run the unit test, which shows that the output of the two are same.
-    [unit test](/computational_lab/assignment2_fin/unit_test/)
+    [unit test](./computational_lab/assignment2_fin/unit_test/)
 
 **Results**
 
@@ -66,21 +66,21 @@ If you need to test the results of the median filtering method, you can enter th
 |3	|98.1|
 |5	|77|
 |7	|54.6|
-|9	|71.42081352|
+|9	|71.4|
 |11	|94.3|
-|13	|73.20196943|
-|15	|61.06157929|
-|17	|76.8493151|
-|19	|100.3787688|
+|13	|73.2|
+|15	|61.1|
+|17	|76.8|
+|19	|100.4|
 |21	|79.64|
-|23	|82.26914864|
+|23	|82.3|
 |25	|87.6|
 |27	|99.1|
 |29	|103.7|
 |31	|111.3|
-|33	|134.319954|
+|33	|134.3|
 |35	|145.4|
-|37	|157.9236164|
+|37	|157.9|
 |39	|173.3|
 |41	|191.1|
 |43	|210.6|
