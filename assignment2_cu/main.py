@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 from scipy.io.wavfile import write
 from scipy.interpolate import CubicSpline
 
-fs, data = wavfile.read('data_degraded.wav')
-fs, b_k = wavfile.read('detectionfile.wav')
-fs, data_clean = wavfile.read('clean.wav')
+fs, data = wavfile.read('data_degraded_2.wav')
+fs, b_k = wavfile.read('detectionfile_2.wav')
+fs, data_clean = wavfile.read('clean_2.wav')
 b_k = b_k.reshape(-1, 1)
 data = data.reshape(-1, 1)
 data_clean = data_clean.reshape(-1, 1)

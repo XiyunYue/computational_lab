@@ -26,7 +26,6 @@ for i in tqdm(range(len(miss_loca))):
         noise_num += 1 
         i += 1
     w = noise_num * 2 + 1
-    print(w)
     x = int((w - 1) / 2)
     data_filter = data[miss_loca[i][0] - x: miss_loca[i][0] + x + 1]
     output = median(data_filter, w)

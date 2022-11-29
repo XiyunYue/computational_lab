@@ -7,6 +7,8 @@ from MSE import mse
 from scipy import ndimage, misc
 import matplotlib.pyplot as plt
 from scipy.io.wavfile import write
+import unittest
+
 fs, data = wavfile.read('data_degraded.wav')
 fs, b_k = wavfile.read('detectionfile.wav')
 fs, data_clean = wavfile.read('clean.wav')
@@ -61,3 +63,17 @@ print(MSE)
 # plt.plot(data_new)
 # plt.show()
 # print("Done")
+
+
+
+class TestMyCode(unittest.TestCase):
+    def test_main_me(self):
+        #result = a
+        #result_ground = b
+        c = [3,4]
+        d = [3,4]
+        check = np.array_equal(c, d)
+
+
+if __name__ == '_main_':
+    unittest.main()
