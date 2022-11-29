@@ -42,7 +42,7 @@ miss_loca_new = []
 click_cons = []
 for i in miss_loca:
     if b_k[i + 1] == 0:
-        w_new = noise_num * 2 + 7
+        w_new = noise_num * 2 + 49
         w = w + [w_new]
         click_cons = click_cons + [noise_num]
         loca = list(i - noise_num + 1)
@@ -53,19 +53,30 @@ for i in miss_loca:
 
 
 #Use median filter to repair each noise point
+start_time = time.time()
 for i in tqdm(range(len(miss_loca_new))):
     w_fft = w[i]
     x = int((w_fft - 1) / 2)
     s = range(miss_loca_new[i] - x, miss_loca_new[i] + click_cons[i] + x)
     data_filter = data[s]
     data_new[s] = median(data_filter, w_fft)
-
+end_time = time.time()
+execution_time = end_time - start_time
+print('The execution time in seconds is :', execution_time)
 #make the output audio and play it
 write("output_medianFilter.wav", fs, data_new)
 playsound("data_degraded.wav")
 playsound("output_me.wav")
+fig = plt.figure(2)
+plt.plot(data_new)
+plt.xlabel("No. of Samples")
+plt.ylabel("Amplitude")
+plt.title("Signal After Median Filtering")
+plt.show()
+
+
 
 #Calculate MSE
-MSE = mse(data_clean, data_new)
-print(MSE)
+MSE1 = mse(data_clean, data_new)
+print(MSE1)
 print("Done")

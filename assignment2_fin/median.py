@@ -25,3 +25,4 @@ def median(data, w):
         data_new = np.sort(data_filter)
         outputs[i][0] = data_new[0][x]
     return (outputs)
+print(median.__doc__)

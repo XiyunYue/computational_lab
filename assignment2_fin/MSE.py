@@ -17,11 +17,11 @@ def mse(data_clean, data_new):
     Returns:
         accuracy: a natural number  
     '''
-    sum_diff = np.float32(0)
 
+    sum_diff = np.float64(0)
     
     for i in range(len(data_clean)):
-        diff = np.float32(data_clean[i][0] - data_new[i][0])**2
+        diff = np.float64(data_clean[i][0] - data_new[i][0])**2
         sum_diff = sum_diff + diff
     accuracy = sum_diff/len(data_clean)
     return accuracy
