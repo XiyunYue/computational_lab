@@ -10,13 +10,18 @@ This assignment builds on Assignment I. We assume that we have successfully dete
 
 ## Installation and Execution                              
 matplotlib==3.6.2
+
 numpy==1.23.4
+
 playsound==1.2.2
+
 scipy==1.9.3
+
 tqdm==4.64.1
 
 Afer installing all required packages you can run the demo file simply by typing:
 python main_me.py
+
 python main_cu.py
 
 
@@ -34,6 +39,8 @@ For the cubic interpolation method, we also need to import the audio first, and 
 **Results**
 
 1. For the median filter, different lengths were explored to test the effectiveness of the restoration. We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
+<img src="table.png" width="350">
+<img src="mse_change.png" width="350">
 
 <img src="MedianFilter_MSEvsLength.png" width="350">
 
