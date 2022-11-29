@@ -10,11 +10,11 @@ This assignment builds on Assignment I. We assume that we have successfully dete
 
 ## Installation and Execution                 
           
-matplotlib==3.6.2
-numpy==1.23.4
-playsound==1.2.2
-scipy==1.9.3
-tqdm==4.64.1
+    matplotlib==3.6.2
+    numpy==1.23.4
+    playsound==1.2.2
+    scipy==1.9.3
+    tqdm==4.64.1
 
 
 
@@ -50,7 +50,7 @@ If you need to test the results of the median filtering method, you can enter th
 3. Unit test：
 
     We also performed unit tests on the program. In order to simplify the test, we rewrite the median filter program as a function whose input is audio data and detection data, and the output has only restorated audio data. Because the python system has a median filter function, we can use this compare with our own designed function. Just copy the original function and change the function called in the last part. It will compare the data in two output one by one. Finally, run the unit test, which shows that the output of the two are same.
-    [unit test](./computational_lab/assignment2_fin/unit_test/)
+    [unit test](./computational_lab/assignment2_fin/unit_test/test.py)
 
 **Results**
 
