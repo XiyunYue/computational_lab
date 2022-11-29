@@ -67,7 +67,14 @@ python test.py
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
-3. The restored waveform with the optimal filter length is given below:
+3. Before filtering, the original audio with clicks is shown in the figure:
+
+<div align=center>
+<img src="data.png" width="350">
+</div>
+
+
+The restored waveform with the optimal filter length is given below:
 
 <div align=center>
 <img src="wav1.png" width="350">
