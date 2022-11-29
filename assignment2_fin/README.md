@@ -19,13 +19,13 @@ tqdm==4.64.1
 
 Afer installing all required packages you can run the demo file simply by typing:
 
-    python main_me.py
+`python main_me.py`
 
-    python main_cu.py
+`python main_cu.py`
 
 If you need to test the results of the median filtering method, you can enter the unit test file and run unit test by typing:
 
-    python test.py
+`python test.py`
 
 
 
