@@ -58,7 +58,7 @@ python test.py
 
     Then we keep increasing b and measure the output MSE each time, store the data in excel, and use matlab to draw the curve relationship between the two.
 
-2. We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
+    We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 <div align=center>
 <img src="table.png" width="350">
 </div>
@@ -67,7 +67,7 @@ python test.py
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
-3. Before filtering, the original audio with clicks is shown in the figure:
+2. Before filtering, the original audio with clicks is shown in the figure:
 
 <div align=center>
 <img src="data.png" width="350">
@@ -80,13 +80,13 @@ The restored waveform with the optimal filter length is given below:
 <img src="wav1.png" width="350">
 </div>
 
-4. Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
+Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
 
 <div align=center>
 <img src="wav2.png" width="350">
 </div>
 
-5. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
+3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
     After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
 
