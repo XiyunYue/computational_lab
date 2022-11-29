@@ -69,14 +69,13 @@ If you need to test the results of the median filtering method, you can enter th
 
 2. Before filtering, the original audio with clicks is shown in the figure:
 
-<div align=center>
-<img src="degraded_signal.png" width="350">
-</div>
+<p float="left">
+<img src="degraded_signal.png" width="350" />
+<img src="clean_signal.png" width="350" />
+</p>
 
 A clean audio signal looks like this:
-<div align=center>
-<img src="clean_single.png" width="350">
-</div>
+
 
 The restored waveform with the optimal filter length is given below:
 
