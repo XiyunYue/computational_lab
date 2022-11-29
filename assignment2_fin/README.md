@@ -50,7 +50,7 @@ If you need to test the results of the median filtering method, you can enter th
 3. Unit test：
 
     We also performed unit tests on the program. In order to simplify the test, we rewrite the median filter program as a function whose input is audio data and detection data, and the output has only restorated audio data. Because the python system has a median filter function, we can use this compare with our own designed function. Just copy the original function and change the function called in the last part. It will compare the data in two output one by one. Finally, run the unit test, which shows that the output of the two are same.
-
+    [unit test](/computational_lab/assignment2_fin/unit_test/)
 
 **Results**
 
@@ -60,10 +60,9 @@ If you need to test the results of the median filtering method, you can enter th
 
     We tested the MSE of w from 2*n+1 to 2*n+45 and 2*n+7 was observed to deliver the lowest MSE, as shown in the figure below.
 
-<div align=center>
-|**b for 2*n+b**|**MSE**|
-|---|---|
-|1	|65.7|
+|**b for 2*n+b**| **MSE** |
+|---------------|---------|
+|1	            |65.7|
 |3	|98.1|
 |5	|77|
 |7	|54.6|
@@ -86,20 +85,18 @@ If you need to test the results of the median filtering method, you can enter th
 |41	|191.1|
 |43	|210.6|
 |45	|218.1|
-</div>
+
 
 
 <div align=center>
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
-2. Before filtering, the original audio with clicks is shown in the figure:
+2. The original audio signal with clicks and clean audio signal show like this:
 <div align=center>
-<p float="left">
-<img src="cos.png" width="350" >
-</p>
+<img src="co.png" width="550" >
 </div>
-A clean audio signal looks like this:
+
 
 
 The restored waveform with the optimal filter length is given below:
