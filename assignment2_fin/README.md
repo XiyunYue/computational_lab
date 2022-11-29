@@ -59,23 +59,3 @@ The restored waveform <output_medianFilter.wav> with the optimal filter length i
 
 After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
 
----
-**Resources:**
-https://en.wikipedia.org/wiki/Markdown
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-Online Readme Editors: https://dillinger.io/ , https://www.makeareadme.com
-https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
-Docstrings: https://www.programiz.com/python-programming/docstrings
-https://numpy.org/doc/stable/user/quickstart.html
-Numpy for matlab users https://numpy.org/doc/stable/user/numpy-for-matlab-users.html
-Progress bars: https://pypi.org/project/progress/
-Audio Basics in Python: https://www.it-jim.com/blog/audio-processing-basics-in-python/
-Unittesting: 
-https://docs.python.org/3/library/unittest.html
-https://colab.research.google.com/github/damorimRG/practical_testing_book/blob/master/testgranularity/unittesting.ipynb
-
-
-
-
-
-
