@@ -67,19 +67,19 @@ python test.py
 <img src="MedianFilter_MSEvsLength.png" width="350">
 </div>
 
-The restored waveform with the optimal filter length is given below:
+3. The restored waveform with the optimal filter length is given below:
 
 <div align=center>
 <img src="wav1.png" width="350">
 </div>
 
-Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
+4. Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
 
 <div align=center>
 <img src="wav2.png" width="350">
 </div>
 
-3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
+5. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
     After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
 
