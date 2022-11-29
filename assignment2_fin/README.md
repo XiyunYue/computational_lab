@@ -20,6 +20,7 @@ scipy==1.9.3
 tqdm==4.64.1
 
 Afer installing all required packages you can run the demo file simply by typing:
+
 python main_me.py
 
 python main_cu.py
