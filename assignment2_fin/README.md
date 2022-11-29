@@ -8,30 +8,30 @@ This assignment builds on Assignment I. We assume that we have successfully dete
 
 ---
 
-## Installation and Execution                              
+## Installation and Execution                 
+
+'''             
 matplotlib==3.6.2
-
 numpy==1.23.4
-
 playsound==1.2.2
-
 scipy==1.9.3
-
 tqdm==4.64.1
+'''
 
 Afer installing all required packages you can run the demo file simply by typing:
 
-python main_me.py
+'python main_me.py
 
-python main_cu.py
+'python main_cu.py
 
 If you need to test the results of the median filtering method, you can enter the unit test file and run unit test by typing:
 
-python test.py
+'python test.py
 
 
 
 ## Methodology and Results
+**Methodology**
 1. Median filtering: 
 
     First we import audio files, detect files and clean files, and convert them into column arrays.
@@ -49,7 +49,6 @@ python test.py
 3. Unit test：
 
     We also performed unit tests on the program. In order to simplify the test, we rewrite the median filter program as a function whose input is audio data and detection data, and the output has only restorated audio data. Because the python system has a median filter function, we can use this compare with our own designed function. Just copy the original function and change the function called in the last part. It will compare the data in two output one by one. Finally, run the unit test, which shows that the output of the two are same.
-
 
 
 **Results**
@@ -70,27 +69,27 @@ python test.py
 2. Before filtering, the original audio with clicks is shown in the figure:
 
 <div align=center>
-<img src="data.png" width="350">
+<img src="data_degraded.png" width="350">
 </div>
 
 A clean audio signal looks like this:
 <div align=center>
-<img src="clean.png" width="350">
+<img src="clean_single.png" width="350">
 </div>
 
 The restored waveform with the optimal filter length is given below:
 
 <div align=center>
-<img src="wav1.png" width="350">
+<img src="me.png" width="350">
 </div>
 
 Using the cubic splines, we observe the restored waveform with the optimal filter length is given below:
 
 <div align=center>
-<img src="wav2.png" width="350">
+<img src="cu.png" width="350">
 </div>
 
 3. Comparing the two different interpolation methods, we notice that when the median filter choose the size which has the lowest MSE, the MSE of two methods is not much different, which are 54.62497559898334 (median filter) and 58.03656307490274 (cubic splines).
 
-    After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s.
+    After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s, which the cubic splines is 0.007112264633178711 and median filter is 0.005995512008666992.
 
