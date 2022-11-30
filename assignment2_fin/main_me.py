@@ -33,6 +33,20 @@ data_clean = data_clean.reshape(-1, 1)
 miss_loca = np.where(b_k != 0)[0]
 miss_loca = miss_loca.reshape(-1, 1)
 
+fig = plt.figure(1)
+plt.subplots_adjust(hspace = 0.7)
+plt.subplot(211)
+plt.plot(data)
+plt.xlabel("No. of Samples", fontsize=15)
+plt.ylabel("Amplitude", fontsize=15)
+plt.title("Clean Signal", fontsize=15)
+
+plt.subplot(212)
+plt.plot(data_clean)
+plt.xlabel("No. of Samples", fontsize=15)
+plt.ylabel("Amplitude", fontsize=15)
+plt.title("Degraded Signal", fontsize=15)
+plt.show()
 #Calculate the filter window size required for clicks at different positions
 #merge consecutive clicks into one detection area
 data_new = data
@@ -42,7 +56,7 @@ miss_loca_new = []
 click_cons = []
 for i in miss_loca:
     if b_k[i + 1] == 0:
-        w_new = noise_num * 2 + 49
+        w_new = noise_num * 2 + 7
         w = w + [w_new]
         click_cons = click_cons + [noise_num]
         loca = list(i - noise_num + 1)
@@ -66,7 +80,7 @@ print('The execution time in seconds is :', execution_time)
 #make the output audio and play it
 write("output_medianFilter.wav", fs, data_new)
 playsound("data_degraded.wav")
-playsound("output_me.wav")
+playsound("output_medianFilter.wav")
 fig = plt.figure(2)
 plt.plot(data_new)
 plt.xlabel("No. of Samples")

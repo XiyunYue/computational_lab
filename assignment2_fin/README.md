@@ -119,3 +119,9 @@ Using the cubic splines, we observe the restored waveform with the optimal filte
 
     After listening to the two restored files, we notice the effects of the two methods are similar, which is fix to the difference of their MSE. Both can basically be executed within 1s, which the cubic splines is 0.007112264633178711 and median filter is 0.005995512008666992.
 
+---
+## Credits
+
+This code was developed for purely academic purposes by Xiaoru Liu (github name: XiyunYue) as part of the module EEP55C22-202223: COMPUTATIONAL METHODS.
+
+https://github.com/XiyunYue/computational_lab/tree/main/assignment2_fin
